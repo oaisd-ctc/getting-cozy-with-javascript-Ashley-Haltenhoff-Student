@@ -1,17 +1,17 @@
 {
     "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
+        "other": true,
+        "comments": true,
+        "strings": true
     },
     "editor.wordBasedSuggestions": "matchingDocuments",
     "editor.suggestOnTriggerCharacters": true,
     "editor.parameterHints.enabled": true,
     "editor.hover.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
     "emmet.includeLanguages": {},
     "emmet.showExpandedAbbreviation": "never",
-    "emmet.triggerExpansionOnTab": false,
+    "emmet.triggerExpansionOnTab": true,
     "emmet.extensionsPath": []
 }

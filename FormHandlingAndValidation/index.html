@@ -33,20 +33,20 @@
     <br><br>
     <form id="form">
         <label for="username">Username : </label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" required pattern=".{3,}">
         <p id="username-error" class="inputErrors invisible">Username needs to be 3 characters or more</p>
 
         <br><br>
 
         <label for="email">Email : </label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" required pattern="a">
         <p id="email-error" class="inputErrors invisible">Invalid email address</p>
 
         <br><br>
 
         <label for="age">Age : </label>
-        <input type="number">
-        <p id="age-error" class="inputErrors invisible">invalid age</p>
+        <input type="number" id="age" required min="10" max="100">
+        <p id="age-error" class="inputErrors invisible">Invalid age</p>
     </form>
 
     <br><br>
