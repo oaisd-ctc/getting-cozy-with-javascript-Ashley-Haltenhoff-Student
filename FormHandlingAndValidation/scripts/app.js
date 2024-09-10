@@ -35,4 +35,7 @@ submitBtn.addEventListener('click', () => {
     if (canSubmit) {
         alert("FORM SUBMITTED");
     }
+    else {
+        preventDefault();
+    }
 })
