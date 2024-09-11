@@ -3,25 +3,34 @@ const addBtn = document.getElementById('btn-add-item');
 const list = document.getElementById('list');
 
 const mainDiv = document.getElementById('main-div');
-const btnDiv = document.getElementById('btn-div');
 
-addBtn.addEventListener('click', () => {
+addBtn.addEventListener('click', AddToList)
+text.addEventListener('keypress', function(e) {
+    if (e.key == 'Enter') {
+        AddToList();
+        text.value = "";
+    }
+});
+
+function AddToList() {
     if (text.value == "") { }
     else {
+        const itemContainer = document.createElement("div");
+        itemContainer.classList.add("item")
+        list.appendChild(itemContainer);
+
         const listObj = document.createElement("li");
         listObj.innerHTML = text.value;
         listObj.classList.add("list-object");
         
         const deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = "Delete";
-        deleteBtn.classList.add("delete-btn");
         
-        list.appendChild(listObj);
-        btnDiv.appendChild(deleteBtn);
+        itemContainer.appendChild(deleteBtn);
+        itemContainer.appendChild(listObj);
 
         deleteBtn.addEventListener('click', () => {
-            listObj.remove();
-            deleteBtn.remove();
+            itemContainer.remove();
         });
     }
-})
+}
